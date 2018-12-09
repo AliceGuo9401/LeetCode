@@ -4,9 +4,10 @@
 using namespace std;
 int divide(int dividend, int divisor) {
     if (divisor == 0 || (dividend == INT32_MIN && divisor == -1)) return INT32_MAX;
-    /*注意：double, int的取值范围；必须使用fabs。*/
+    /*注意：double, int的取值范围；必须使用fabs，double占8个字节。*/
     double i = log(fabs(dividend));   //double log(double x)函数，定义在cmath头文件中，底数为e。lnM - ln N = ln(M/N)
     double j = log(fabs(divisor));    //fabs函数，定义在cmath头文件中，求浮点数的绝对值
+    /*假设：i=2147483648，j=1。因为exp返回值的类型是double，占8个字节，所以不会发生溢出。*/
     int quotient = (int)exp(i - j);   //double exp(double x)函数，定义在cmath头文件中，e的x次方。e的ln(M/N)次方
     return dividend < 0 ^ divisor < 0 ? -quotient : quotient;       //条件运算符 ? :
 }
