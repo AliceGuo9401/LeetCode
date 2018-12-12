@@ -10,7 +10,7 @@ vector<int> searchRange(vector<int>& nums, int target) {
         mid = (low + high) / 2;
         if (nums[low] == target && nums[high] == target) {positions[0] = low; positions[1] = high; return positions;}
 
-        if (nums[low] == target) {
+        /*if (nums[low] == target) {
             positions[0] = low;
             while (low < high) {
                 if (nums[mid] == target) {
@@ -40,9 +40,9 @@ vector<int> searchRange(vector<int>& nums, int target) {
             if (nums[low] == target)
                 positions[0] = low;
             break;
-        }
+        }*/
 
-        if (nums[mid] == target) {                /**/
+        if (nums[mid] == target) {               
             int midL = (low + mid) / 2;
             int midH = (high+ mid) / 2;
             int midTemp(mid);
