@@ -18,6 +18,7 @@ void nextPermutation(vector<int>& nums) {
     sort(nums.end() - i, nums.end());
     return ;
 }
+
 int main() {
     vector<int> nums{2, 1, 3};
     nextPermutation(nums);
