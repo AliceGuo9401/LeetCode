@@ -22,6 +22,7 @@ int removeElement(vector<int>& nums, int val) {
     }
     return i;
 }
+
 int main() {
     vector<int> nums{3, 2, 2, 3};
     int val = 3;
