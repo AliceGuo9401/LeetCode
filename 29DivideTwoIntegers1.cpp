@@ -21,6 +21,7 @@ int divide(int dividend, int divisor) {
     }
     return (dividend < 0) ^ (divisor < 0) ? -quotient : quotient;
 }
+
 int main() {
     int dividend(-2147483648), divisor(1);
     int quotient = divide(dividend, divisor);
