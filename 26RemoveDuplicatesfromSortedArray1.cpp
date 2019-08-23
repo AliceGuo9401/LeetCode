@@ -14,7 +14,7 @@ int removeDuplicates(vector<int>& nums) {
                 ++j;
             else if (nums[j] != nums[i]) {
                 ++length;
-                nums[k + 1] = nums[j];    //1, 1, 2 -> 1, 2, 2
+                nums[k + 1] = nums[j];          //1, 1, 2 -> 1, 2, 2
                 k = k + 1;
                 break;
             }
