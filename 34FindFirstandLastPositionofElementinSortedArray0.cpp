@@ -78,6 +78,7 @@ vector<int> searchRange(vector<int>& nums, int target) {
     if (low == high && target != nums[low] || high == -1) return positions;
     return positions;
 }
+
 int main() {
     vector<int> nums{0, 0, 1, 1, 1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 6, 6, 6, 8, 10, 10};
     int target(4);
