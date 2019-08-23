@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+
 vector<int> searchRange(vector<int>& nums, int target) {
     vector<int> positions{-1, -1};
     if (nums.empty()) return positions;
