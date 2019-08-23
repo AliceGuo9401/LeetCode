@@ -17,7 +17,6 @@ int searchInsert(vector<int>& nums, int target) {
     }
     return low;   /**/
 }
-
 int main() {
     vector<int> nums{ };
     int target(8);
